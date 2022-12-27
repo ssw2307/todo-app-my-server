@@ -1,7 +1,6 @@
 const express = require("express");
 const app= express();
 
-/*
 const cors = require("cors");
 app.use(cors());
 app.use(express.urlencoded({extended:true}));
@@ -13,7 +12,7 @@ dotenv.config();
 const db = require("./db/db");
 const todoSchema = require("./models/TodoSchema");
 
-*/
+
 app.set("port",process.env.PORT || 5000);
 const PORT = app.get("port");
 
@@ -24,7 +23,7 @@ app.get("/",(req,res)=>{
     res.send("express start77")
 })
 
-/*
+
 app.get("/todo/list",(req,res)=>{
 
     todoSchema.find()
@@ -62,7 +61,7 @@ app.put("/todo/modify/:id",(req,res)=>{
     .catch((e)=>{console.log(e)})
 
 })
-*/
+
 
 app.listen(PORT, ()=>{
     console.log(PORT + " : 포트에서 노드 서버 대기중")
